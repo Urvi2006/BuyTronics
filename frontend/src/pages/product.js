@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import Header from '../components/Header';
 
@@ -11,13 +11,26 @@ export default function Products() {
     { id: 4, name: 'Samsung Galaxy S24', price: 89999, image: 'https://via.placeholder.com/200' },
   ]);
 
-  const addToCart = (product) => {
-    dispatch({ type: 'ADD_TO_CART', payload: product });
+  const addToCart = (p) => {
+    const payload = {
+      product_id: p.id,
+      product_name: p.name,
+      product_image: p.image,
+      price: p.price,
+      quantity: 1
+    };
+    dispatch({ type: 'ADD_TO_CART', payload });
     alert('Added to cart!');
   };
 
-  const addToWishlist = (product) => {
-    dispatch({ type: 'ADD_TO_WISHLIST', payload: product });
+  const addToWishlist = (p) => {
+    const payload = {
+      product_id: p.id,
+      product_name: p.name,
+      product_image: p.image,
+      price: p.price
+    };
+    dispatch({ type: 'ADD_TO_WISHLIST', payload });
     alert('Added to wishlist!');
   };
 

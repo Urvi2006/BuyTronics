@@ -128,23 +128,10 @@ function Login() {
 
         {/* Welcome Section */}
         <div className="login-welcome">
-          <div className="welcome-icon">👋</div>
           <h1 className="welcome-title">Welcome Back!</h1>
           <p className="welcome-subtitle">
             Sign in to your account to continue shopping amazing electronics
           </p>
-        </div>
-
-        {/* Demo Login Button */}
-        <div className="demo-section">
-          <button 
-            type="button" 
-            className="demo-btn"
-            onClick={handleDemoLogin}
-          >
-            <span className="demo-icon">⚡</span>
-            Try Demo Account
-          </button>
         </div>
 
         {/* Social Login */}
@@ -154,7 +141,7 @@ function Login() {
             className="social-btn google-btn"
             onClick={() => handleSocialLogin('Google')}
           >
-            <span className="social-icon">🌐</span>
+            <span className="social-icon"><i class="fa-brands fa-google"></i></span>
             Continue with Google
           </button>
           
@@ -163,7 +150,7 @@ function Login() {
             className="social-btn facebook-btn"
             onClick={() => handleSocialLogin('Facebook')}
           >
-            <span className="social-icon">📘</span>
+            <span className="social-icon"><i class="fa-brands fa-facebook"></i></span>
             Continue with Facebook
           </button>
         </div>
@@ -230,7 +217,7 @@ function Login() {
                 className="password-toggle"
                 onClick={() => setShowPassword(!showPassword)}
               >
-                {showPassword ? '🙈' : '👁️'}
+                {showPassword ? 'hide' : '👁️'}
               </button>
             </div>
             {errors.password && (

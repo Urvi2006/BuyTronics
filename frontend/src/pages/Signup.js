@@ -61,8 +61,6 @@ function Signup() {
             <div className="signup-card">
                 <div className="brand-header">
                     <Link to="/" className="brand-link">
-                        <span className="brand-icon">⚡</span>
-                        <span className="brand-name">BuyTronics</span>
                     </Link>
                 </div>
 
@@ -145,9 +143,9 @@ function Signup() {
 
                     <p className="login-link">Already have an account?</p>
                     
-                    <Link to="/login" className="btn btn-secondary">
+                    <span><Link to="/login" className="btn btn-secondary">
                         🔓 Login to Your Account
-                    </Link>
+                    </Link></span>
 
                     <div className="home-link">
                         <Link to="/">← Back to Home</Link>

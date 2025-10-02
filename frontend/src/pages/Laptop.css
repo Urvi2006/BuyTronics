@@ -1,0 +1,105 @@
+.laptop-list{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    text-align: center;
+    color:  #667eea;
+    
+}
+.page { display: grid; 
+  padding: 2rem;gap: 24px; }
+
+.section-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.section-header h2 { margin: 0 0 4px; font-size: 14px; }
+
+/*Hero*/
+hero-image{
+  padding: 5rem;
+}
+.hero { position: relative; background: linear-gradient(135deg, #0f172a, #1e293b); border-radius: 16px; padding: 48px 24px; color: #fff; overflow: hidden; }
+.hero--laptop { background-image: radial-gradient(1200px 400px at 80% -20%, rgba(56,189,248,.25), transparent), linear-gradient(135deg, #0ea5e9, #1e293b); }
+.hero__content { max-width: 710px; }
+.hero h1 { margin: 0 0 8px; font-size: 30px; }
+.hero p { margin: 0 0 16px; font-size: 16px; opacity: .9; }
+
+/* Filter chips */
+.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { border: 1px solid #e5e7eb; background: #fff; padding: 8px 12px; border-radius: 999px; font-size: 13px; cursor: pointer; }
+.chip:hover { border-color: #cbd5e1; }
+.chip--muted { background: #f8fafc; border-color: #f1f5f9; }
+.chip--active { background: #0ea5e9; color: #fff; border-color: #0ea5e9; }
+
+/* Grid*/
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+
+/* Product Card */
+.card { position: relative; background: #fff; border: 1px solid #eef2f7; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; transition: transform .15s ease, box-shadow .15s ease; }
+.card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(2,6,23,.08); }
+
+.image-wrap { position: relative; background: #f8fafc; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.image-wrap img { width: 100%; height: 100%; object-fit: contain; }
+.badge { position: absolute; left: 10px; top: 10px; background: #0ea5e9; color: white; padding: 6px 8px; border-radius: 8px; font-size: 12px; }
+.ribbon { position: absolute; right: -40px; top: 12px; transform: rotate(45deg); background: #16a34a; color: #fff; padding: 6px 50px; font-size: 12px; }
+.wish { position: absolute; right: 10px; top: 10px; background: white; border: 1px solid #e5e7eb; width: 36px; height: 36px; border-radius: 999px; cursor: pointer; }
+.wish.is-active { color: #ef4444; border-color: #fecaca; }
+
+.quick { position: absolute; bottom: 10px; right: 10px; background: rgba(15,23,42,.85); color: #fff; border: 0; padding: 8px 10px; border-radius: 8px; cursor: pointer; font-size: 12px; }
+
+.content { padding: 12px; display: grid; gap: 8px; }
+.title { font-size: 15px; margin: 0; line-height: 1.3; min-height: 40px; }
+.rating { display: flex; align-items: center; gap: 6px; }
+.stars { color: #f59e0b; letter-spacing: 1px; font-family: ui-sans-serif, system-ui; }
+.rating__text { font-weight: 600; font-size: 13px; }
+
+.price { display: flex; align-items: baseline; gap: 8px; }
+.price__final { font-size: 18px; font-weight: 700; color: #111827; }
+.price__mrp { color: #94a3b8; text-decoration: line-through; font-size: 13px; }
+.price__off { color: #16a34a; font-size: 12px; font-weight: 600; }
+
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.actions { display: flex; gap: 8px; margin-top: 4px; }
+.btn { padding: 10px 12px; border-radius: 10px; cursor: pointer; font-weight: 600; border: 1px solid transparent; }
+.btn--primary { background: #0ea5e9; color: #fff; }
+.btn--primary:hover { background: #0284c7; }
+.btn--ghost { background: #fff; border-color: #e5e7eb; }
+.btn--ghost:hover { border-color: #94a3b8; }
+.btn:disabled { opacity: .6; cursor: not-allowed; }
+
+/* ============ Benefits strip ============ */
+.benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.benefit { display: flex; gap: 10px; align-items: center; background: #fff; border: 1px solid #eef2f7; border-radius: 12px; padding: 12px; }
+.benefit__title { font-weight: 600; }
+
+/* ============ Modal (Quick View) ============ */
+.modal { position: fixed; inset: 0; background: rgba(2,6,23,.6); display: grid; place-items: center; z-index: 50; padding: 16px; }
+.modal__content { background: #fff; border-radius: 14px; padding: 16px; display: grid; grid-template-columns: minmax(0, 1fr) 1fr; gap: 16px; max-width: 900px; width: 100%; position: relative; }
+.modal__content img { width: 100%; height: 100%; object-fit: contain; background: #f8fafc; border-radius: 10px; }
+.modal__side { display: grid; gap: 12px; align-content: start; }
+.modal__close { position: absolute; right: 16px; top: 16px; background: #fff; border: 1px solid #e5e7eb; width: 36px; height: 36px; border-radius: 999px; cursor: pointer; }
+
+/* ============ Toasts ============ */
+.toasts { position: fixed; right: 16px; bottom: 16px; display: grid; gap: 8px; z-index: 60; }
+.toast { background: #111827; color: #fff; padding: 10px 12px; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+
+/* ============ Skeleton loaders ============ */
+.skeleton { animation: pulse 1.4s ease-in-out infinite; }
+.s-row { height: 16px; background: #eef2f7; border-radius: 8px; margin: 8px 0; }
+.s-row.short { width: 60%; }
+.s-row.tiny { width: 40%; height: 12px; }
+.s-btns { height: 36px; background: #eef2f7; border-radius: 10px; }
+@keyframes pulse { 0% { opacity: .9 } 50% { opacity: .5 } 100% { opacity: .9 } }
+
+/* ============ Utilities ============ */
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+/* ============ Responsive ============ */
+@media (max-width: 800px) {
+  .modal__content { grid-template-columns: 1fr; }
+}
+
+
+
+
+
+
+
+

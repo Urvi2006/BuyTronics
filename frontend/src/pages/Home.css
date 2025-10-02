@@ -15,7 +15,6 @@ body {
   background: #f8f9fa;
 }
 
-/* Navigation Styles */
 .navbar {
   background: white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -129,21 +128,22 @@ body {
 }
 
 .login-btn {
-  color: #667eea;
+  color: #f8f9fa;
   border: 2px solid #667eea;
-  height: 50px;
-  width: 50px;
+height: 50px;
+  width: 120px;
+  border-radius: 12px;
   margin-top: 10px;
+  border: 2px solid transparent;
 }
 
 .login-btn:hover {
   background: #667eea;
-  color: white;
   transform: translateY(-2px);
 }
 
 .signup-btn {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #667eea 0%, #be8af3 100%);
   color: white;
   height: 50px;
   width: 120px;
@@ -154,6 +154,7 @@ body {
 
 .signup-btn:hover {
   transform: translateY(-2px);
+  background: #667eea;
   box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
 }
 
@@ -317,15 +318,17 @@ body {
 
 .hero-content {
   display: flex;
-  align-items: center;
+  align-items: top;
   justify-content: space-between;
-  width: 100%;
-  max-width: 1200px;
+  width: 80%;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
 .hero-text {
   flex: 1;
+  
+  align-items: start;
   color: white;
 }
 
@@ -383,22 +386,34 @@ body {
   background: rgba(255, 255, 255, 0.3);
   transform: translateY(-3px);
 }
-
+.hero-button-style{
+  background-color: whitesmoke;
+  color: #be8af3;
+  height: 60px;
+  font-size: 19px;
+  border: none;
+  padding: 1rem;
+  font-weight: bold;
+  border-radius: 15px;
+  width: 10rem;
+  text-align: center;
+}
 .hero-image {
   flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: normal;
+  margin-bottom: 20px;
   padding-left: 2rem;
 }
 
 /* Hero Image Styles */
 .hero-product-image {
-  max-width: 400px;
-  max-height: 350px;
+  max-width: 500px;
+  max-height: 400px;
   object-fit: contain;
   filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.2));
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
 }
 
 .hero-slide.active .hero-product-image {
@@ -408,7 +423,7 @@ body {
 /* Slider Controls */
 .slider-controls {
   position: absolute;
-  bottom: 2rem;
+  bottom: 4rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -903,10 +918,10 @@ body {
 
 .feature-icon {
   font-size: 2.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /*background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
+  background-clip: text;*/
 }
 
 .feature-content h3 {
